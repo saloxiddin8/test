@@ -129,7 +129,7 @@
       <!-- Hero Section -->
       <section
         id="hero"
-        class="py-40 flex flex-col justify-center items-center  text-purple-500"
+        class="py-40 flex flex-col justify-center items-center text-purple-500"
       >
         <div class="text-center max-w-2xl">
           <div class="mb-6">
@@ -421,10 +421,10 @@
           </div>
         </div>
       </section>
-      <footer class="text-center py-6 text-sm opacity-60 mt-10">
-        © 2025 Solohiddin Dev | All rights reserved
-      </footer>
     </main>
+    <footer class="text-center py-6 text-sm opacity-60 mt-10">
+      © 2025 Solohiddin Dev | All rights reserved
+    </footer>
   </div>
 </template>
 
@@ -478,7 +478,7 @@ const cards = [
 
 // Skills array
 const skills = [
-  { name: "Vue.js", level: 90, icon: "public/favicon.ico" },
+  { name: "Vue.js", level: 90, icon: "https://static.cdnlogo.com/logos/v/92/vue-js.svg" },
   {
     name: "Nuxt.js",
     level: 75,
@@ -491,7 +491,7 @@ const skills = [
   },
   {
     name: "JavaScript",
-    level: 95,
+    level: 90,
     icon: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/javascript.svg",
   },
   {
@@ -574,10 +574,10 @@ onMounted(() => {
 </script>
 
 <style scoped >
-#hero{
+#hero {
   width: inherit;
   height: inherit;
-  background: url('../assets/img/bg-hero.jpg') no-repeat center center/cover;
+  background: url("../assets/img/bg-hero.jpg") no-repeat center center/cover;
 }
 @keyframes wave {
   0% {
