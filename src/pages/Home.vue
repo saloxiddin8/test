@@ -6,7 +6,7 @@
     >
       <div class="container flex justify-between items-center mx-auto">
         <h1 class="text-2xl font-bold text-purple-500">
-          <span class="text-white">S</span>alox<span class="text-white"
+          <span class="text-white">S</span>alokh<span class="text-white"
             >.wd</span
           >
         </h1>
@@ -125,11 +125,11 @@
         </ul>
       </div>
     </nav>
-    <div class="mx-auto min-h-screen">
+    <main class="mx-auto min-h-screen">
       <!-- Hero Section -->
       <section
         id="hero"
-        class="py-40 flex flex-col justify-center items-center bg-gradient-to-br from-purple-800 via-indigo-700 to-blue-800 text-white"
+        class="py-40 flex flex-col justify-center items-center  text-purple-500"
       >
         <div class="text-center max-w-2xl">
           <div class="mb-6">
@@ -141,10 +141,10 @@
           </div>
 
           <h1 class="text-5xl font-extrabold mb-3">
-            Hi, I'm <span class="text-yellow-400">Salox</span>
+            Hi, I'm <span class="text-yellow-400">Salokh</span>
           </h1>
           <h2 class="text-2xl font-semibold mb-4">Frontend Developer</h2>
-          <p class="text-lg text-gray-200 mb-8">
+          <p class="text-lg text-purple-200 mb-8">
             I craft modern, interactive and responsive web experiences using
             <span class="text-yellow-300 font-semibold">Vue</span>,
             <span class="text-yellow-300 font-semibold">Nuxt</span>, and
@@ -153,7 +153,7 @@
 
           <div class="flex justify-center gap-4 mb-6">
             <a
-              href="https://github.com/"
+              href="https://github.com/saloxiddin8"
               target="_blank"
               class="text-white hover:text-yellow-400 transition"
             >
@@ -167,7 +167,7 @@
               <i class="fa-brands fa-linkedin fa-2x"></i>
             </a>
             <a
-              href="https://t.me/"
+              href="https://t.me/Saloxwd"
               target="_blank"
               class="text-white hover:text-yellow-400 transition"
             >
@@ -176,16 +176,18 @@
           </div>
 
           <div class="flex justify-center gap-5">
-            <button
+            <a
+              href="#projects"
               class="bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full shadow-md hover:bg-yellow-300 transition"
             >
               View Projects
-            </button>
-            <button
+            </a>
+            <a
+              href="#contact"
               class="border border-yellow-400 text-yellow-400 px-6 py-3 rounded-full hover:bg-yellow-400 hover:text-black transition"
             >
               Hire Me
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -246,7 +248,7 @@
       <!-- skills -->
       <section
         id="skills"
-        class="text-white py-20 px-6 text-center mt-53 mb-20"
+        class="text-white py-20 px-6 text-center mt-53 mb-40"
       >
         <h2
           data-aos="fade-down"
@@ -282,19 +284,21 @@
 
       <!-- Cards Section -->
       <section id="cards" class="container mx-auto mt-53 mb-40">
-        <h1 class="text-3xl md:text-5xl font-bold mb-12 mt-20 text-center">
-          Service
-        </h1>
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-10 mt-16"
-        >
+        <div class="flex flex-col items-center justify-center">
+          <h1 class="text-3xl md:text-5xl font-bold mb-12 mt-40 text-center">
+            Service
+          </h1>
           <div
-            v-for="(card, index) in cards"
-            :key="index"
-            class="bg-white text-black rounded-xl p-6 shadow-xl hover:scale-105 hover:rotate-1 hover:bg-yellow-100 transition-transform duration-500"
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-10 mt-16"
           >
-            <h3 class="text-xl font-bold mb-2">{{ card.title }}</h3>
-            <p class="opacity-80">{{ card.desc }}</p>
+            <div
+              v-for="(card, index) in cards"
+              :key="index"
+              class="bg-white text-black rounded-xl p-6 shadow-xl hover:scale-105 hover:rotate-1 hover:bg-yellow-100 transition-transform duration-500"
+            >
+              <h3 class="text-xl font-bold mb-2">{{ card.title }}</h3>
+              <p class="opacity-80">{{ card.desc }}</p>
+            </div>
           </div>
         </div>
       </section>
@@ -420,7 +424,7 @@
       <footer class="text-center py-6 text-sm opacity-60 mt-10">
         © 2025 Solohiddin Dev | All rights reserved
       </footer>
-    </div>
+    </main>
   </div>
 </template>
 
@@ -438,7 +442,7 @@ const email = ref("");
 const message = ref("");
 
 // Active section for navbar highlight
-const activeSection = ref("home");
+const activeSection = ref("hero");
 
 // Contact form submit handler
 const handleSubmit = async () => {
@@ -569,8 +573,12 @@ onMounted(() => {
 });
 </script>
 
-
 <style scoped >
+#hero{
+  width: inherit;
+  height: inherit;
+  background: url('../assets/img/bg-hero.jpg') no-repeat center center/cover;
+}
 @keyframes wave {
   0% {
     transform: translateX(-50%) translateY(0);
@@ -582,30 +590,15 @@ onMounted(() => {
     transform: translateX(50%) translateY(0);
   }
 }
-section {
-  animation: fadeIn 1s ease forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 html {
   scroll-behavior: smooth;
 }
-html {
-  scroll-behavior: smooth;
-}
+
 section {
   animation: fadeIn 1s ease forwards;
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
