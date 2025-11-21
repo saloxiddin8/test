@@ -96,7 +96,7 @@
             :class="{ 'text-yellow-400': activeSection === 'home' }"
             class="hover:text-yellow-400 transition cursor-pointer"
           >
-            <a href="#home" @click="menuOpen = false">Home</a>
+            <a href="#hero" @click="menuOpen = false">Home</a>
           </li>
           <li
             :class="{ 'text-yellow-400': activeSection === 'about' }"
